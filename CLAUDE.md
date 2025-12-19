@@ -1,0 +1,12 @@
+- Before checking that the changes made are working in the production environment, commit and push the changes, so that the build gets triggered automatically
+- Before considering a task done, run eslint to check any linting issues. Then fix them.
+- before considering a task done, run a build to check that the code compiles.
+- Before considering a task done, run all tests to make sure they are all passing.
+- When working from a GitHub issue, create a new branch from main. When you finish the work, commit the changes to that branch, push to GitHub, and submit a pull request.
+- After finishing working on a GitHub Issue and submitting a pull request, call security-agent and architecture-agent, asking each to submit their review as a comment to the PR.
+- After receiving the review from all three agents, implement the changes that are flagged as blockers, critical, or major, and for all other finding, create one GitHub issue for all the medium findings, and one issue for all the low findings.
+- If the findings from the reviewers are not related to the work of the PR you are implementing right now, create a separate issue for them.
+- After all the work is done, invoke the project-manager agent to tidy up the newly created issues only.
+- If the code you just committed closes one or more issues, don't close them manually. Instead, mention on the commit message, with each issue on their own line, with the pattern "Closes #<issue number>".
+- When fetching reviews from a PR, use the get_pull_request_reviews command from the GitHub MCP
+- When creating a pull request, use the create_pull_request command from GitHub MCP
